@@ -25,14 +25,15 @@ macx {
     LIB_PATH = $$clean_path($$OUT_PWD/../SubLibrary)
     LIBS += $$LIB_PATH/libSubLibrary.dylib
     QMAKE_LFLAGS += "-Wl,-rpath,$$LIB_PATH"
-#    QMAKE_LFLAGS += "-Wl,-rpath,/Users/user/Workspace/Projects/AlsCube/TestingFromTheStart/build/SubLibrary/SubLibrary"
     TARGET_NAME = $$OUT_PWD/$$TARGET
 }
 
 linux {
+    LIB_PATH = $$clean_path($$OUT_PWD/../SubLibrary)
+    LIBS += $$LIB_PATH/libSubLibrary.so
+    QMAKE_LFLAGS += "-Wl,-rpath,$$LIB_PATH"
+    TARGET_NAME = $$OUT_PWD/$$TARGET
 }
 
 QMAKE_POST_LINK = $$TARGET_NAME
 
-#LIBS_DIR == $$clean_path( $$OUT_PWD/../SubLibrary )
-#message( LIBS_DIR: $$LIBS_DIR )

@@ -23,13 +23,14 @@ win32 {
 }
 
 macx {
-    DESTDIR = .
     CONFIG -= app_bundle
     LIBS += ../AddLibrary/libAddLibrary.a
-    TARGET_NAME = $$TARGET
+    TARGET_NAME = $$OUT_PWD/$$TARGET
 }
 
 linux {
+    LIBS += ../AddLibrary/libAddLibrary.a
+    TARGET_NAME = $$OUT_PWD/$$TARGET
 }
 
-QMAKE_POST_LINK = $$DESTDIR/$$TARGET_NAME
+QMAKE_POST_LINK = $$TARGET_NAME

@@ -17,7 +17,16 @@ HEADERS += \
     SubLibrary_global.h \
     SubLibrary.h
 
-CONFIG += unversioned_libname
-POST_LINK_STEP=install_name_tool -id @rpath/libSubLibrary.dylib $$OUT_PWD/libSubLibrary.dylib
-QMAKE_POST_LINK=$$quote($$POST_LINK_STEP)
+win32 {
+}
+
+macx {
+    CONFIG += unversioned_libname
+    POST_LINK_STEP=install_name_tool -id @rpath/libSubLibrary.dylib $$OUT_PWD/libSubLibrary.dylib
+    QMAKE_POST_LINK=$$quote($$POST_LINK_STEP)
+}
+
+linux {
+    # CONFIG += unversioned_libname
+}
 
