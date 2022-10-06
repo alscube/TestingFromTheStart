@@ -1,0 +1,12 @@
+#ifndef SUBLIBRARY_GLOBAL_H
+#define SUBLIBRARY_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(SUBLIBRARY_LIBRARY)
+#  define SUBLIBRARY_EXPORT Q_DECL_EXPORT
+#else
+#  define SUBLIBRARY_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SUBLIBRARY_GLOBAL_H
