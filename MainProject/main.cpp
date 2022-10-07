@@ -8,9 +8,9 @@
 
 int main( int, char** )
 {
-    AddLibrary add;
-    qDebug() << "MainProject add" << add.AddByTen( 40) ;
+	AddLibrary add;
+	printf( "MainProject add %d\n", add.AddByTen(40) );
 
-    SubLibrary sub;
-    qDebug() << "MainProject sub" << sub.SubtractByOneHundred( 900 );
+	SubLibrary sub;
+	printf( "MainProject sub %d\n", sub.SubtractByOneHundred(900) );
 }

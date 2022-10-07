@@ -20,6 +20,14 @@ SOURCES += \
 
 
 win32 {
+    BLD_CONFIG = debug
+
+    CONFIG(release, debug|release) {
+      BLD_CONFIG = release
+    }
+
+    LIBS += ../AddLibrary/$$BLD_CONFIG/AddLibrary.lib
+    TARGET_NAME = $$OUT_PWD/$$BLD_CONFIG/$$TARGET
 }
 
 macx {

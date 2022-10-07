@@ -18,6 +18,20 @@ SOURCES += \
 
 
 win32 {
+    BLD_CONFIG = debug
+
+    CONFIG(release, debug|release) {
+      BLD_CONFIG = release
+    }
+
+    # copy DLL into test folder
+    COPY_LIB = $$quote( $$OUT_PWD/../SubLibrary/$$BLD_CONFIG/SubLibrary.dll $$OUT_PWD/$$BLD_CONFIG/SubLibrary.dll )
+    COPY_LIB ~= s,/,\\,g
+    QMAKE_PRE_LINK = $$QMAKE_COPY $$COPY_LIB
+
+    LIB_PATH = $$clean_path($$OUT_PWD/../SubLibrary/$$BLD_CONFIG)
+    LIBS += $$LIB_PATH/SubLibrary.lib
+    TARGET_NAME = $$OUT_PWD/$$BLD_CONFIG/$$TARGET
 }
 
 macx {

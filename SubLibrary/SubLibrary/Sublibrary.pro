@@ -10,6 +10,7 @@ QT -= gui
 
 DEFINES += SUBLIBRARY_LIBRARY
 
+
 SOURCES += \
     SubLibrary.cpp
 
@@ -17,7 +18,11 @@ HEADERS += \
     SubLibrary_global.h \
     SubLibrary.h
 
+
 win32 {
+# QMAKE_POST_LINK += $$QMAKE_COPY_DIR $$shell_quote($$file) $$shell_quote($$dir) $$escape_expand(\\n\\t)
+#    COPY_LIB = $$QMAKE_COPY $$quote( $$OUT_PWD/SubLibrary.dll $$OUT_PWD/
+#    QMAKE_POST_LINK =  $$QMAKE_COPY $$quote( $$OUT_PWD/SubLibrary.dll
 }
 
 macx {
@@ -27,6 +32,6 @@ macx {
 }
 
 linux {
-    # CONFIG += unversioned_libname
+    #
 }
 
