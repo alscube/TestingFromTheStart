@@ -10,7 +10,7 @@ This project builds 3 sub-projects; one staic library (AddLibrary), one dynamic 
 
 This is the project layout:
 
-  SUBDIRS =
+    SUBDIRS =
     ./AddLibrary/AddLibrary.pro
         SUBDIRS = 
             ./AddLibrary/AddLibrary.pro
