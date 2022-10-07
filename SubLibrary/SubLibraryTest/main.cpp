@@ -1,8 +1,13 @@
 
+// main.cpp
+//
+// Copyright (C) 2022 Al's Cube
+// see www.alscube.com
+
+
 #include <SubLibraryTest.h>
 
-
-// TEST_MAIN
+// test main for SubLibrary
 int main(int argc, char *argv[])
 {
     qputenv("QT_FORCE_STDERR_LOGGING", "1");

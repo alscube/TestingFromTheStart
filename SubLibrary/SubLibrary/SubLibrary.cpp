@@ -2,6 +2,9 @@
 // SubLibrary.cpp
 
 #include "SubLibrary.h"
+//
+// Copyright (C) 2022 Al's Cube
+// see www.alscube.com
 
 SubLibrary::SubLibrary()
 {

@@ -1,5 +1,11 @@
-#ifndef SUBLIBRARY_GLOBAL_H
-#define SUBLIBRARY_GLOBAL_H
+
+// SubLibrary_global.h
+//
+// Copyright (C) 2022 Al's Cube
+// see www.alscube.com
+
+
+#pragma once
 
 #include <QtCore/qglobal.h>
 
@@ -9,4 +15,4 @@
 #  define SUBLIBRARY_EXPORT Q_DECL_IMPORT
 #endif
 
-#endif // SUBLIBRARY_GLOBAL_H
+

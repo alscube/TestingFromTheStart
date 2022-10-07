@@ -1,5 +1,8 @@
 
 // AddLibraryTestMain.cpp
+//
+// Copyright (C) 2022 Al's Cube
+// see www.alscube.com
 
 #include <AddLibraryTest.h>
 
